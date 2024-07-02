@@ -177,7 +177,7 @@ namespace Assignment05
             Console.WriteLine(result);
             #endregion
 
-            Console.WriteLine("Hello world");
+            //Hello Ebrahemots
 
         }
 

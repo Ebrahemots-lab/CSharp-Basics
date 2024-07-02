@@ -177,6 +177,8 @@ namespace Assignment05
             Console.WriteLine(result);
             #endregion
 
+            Console.WriteLine("Hello world");
+
         }
 
        static string ChangeChar(string word , char ch , int index) 

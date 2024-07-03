@@ -205,7 +205,6 @@
             DoNothing(); // Call the function By It's Name 
                          //Static Function Means we can directly call it using The parent class 
 
-
             //Function Parameters 
             /*
              * We have two Types of parameter
@@ -245,103 +244,6 @@
 
             //Console.WriteLine(z); // 11
 
-
-            //Passing Referecnce type 
-            /*
-             * Passing by value :
-             * if we use passing by value in reference type it will change the real object
-             * meaning it will create another obect in the stack that hold the same adress of the real
-             * arguement that we passed to it 
-             */
-            //int[] arr01 = { 1, 2, 4 };
-            //Console.WriteLine(arr01[0]); // 1
-
-            //ModifyArr(arr01);
-
-            //Console.WriteLine(arr01[0]); // 100
-
-            //Passing by ref 
-            /*
-             * it will do the same but this time it will not create another object in the stack
-             * it will go directly and update the real argument that we passed to the function
-             */
-
-            //int[] arr01 = { 1, 2, 4 };
-            //Console.WriteLine(arr01[0]); // 1
-
-            //ModifyArr(ref arr01);
-
-            //Console.WriteLine(arr01[0]); // 100
-
-            //What is the difference now?
-            /*
-             * the difference will occured if we try to assign the parameter that function take 
-             * to another object
-             * Let's see an example
-             * if we modify the arr parameter in the modify arr and assign it to a new object
-             * arry that hold 789 
-             */
-
-            //in this example it will give 1 because the arr in the function now refere to a new object
-            //int[] arr02 = new int[] { 1, 2, 3 };
-            //Console.WriteLine(arr02[0]); // 1
-            //ModifyArr02(arr02);
-            //Console.WriteLine(arr02[0]); // 1
-
-            //it will give 1 - 7 because in the method it updated the real array
-            //int[] arr02 = new int[] { 1, 2, 3 };
-            //Console.WriteLine(arr02[0]); // 1
-            //ModifyArr02(ref arr02);
-            //Console.WriteLine(arr02[0]); // 7
-
-
-            //Passing Referecnce type 
-            /*
-             * Passing by value :
-             * if we use passing by value in reference type it will change the real object
-             * meaning it will create another obect in the stack that hold the same adress of the real
-             * arguement that we passed to it 
-             */
-            //int[] arr01 = { 1, 2, 4 };
-            //Console.WriteLine(arr01[0]); // 1
-
-            //ModifyArr(arr01);
-
-            //Console.WriteLine(arr01[0]); // 100
-
-            //Passing by ref 
-            /*
-             * it will do the same but this time it will not create another object in the stack
-             * it will go directly and update the real argument that we passed to the function
-             */
-
-            //int[] arr01 = { 1, 2, 4 };
-            //Console.WriteLine(arr01[0]); // 1
-
-            //ModifyArr(ref arr01);
-
-            //Console.WriteLine(arr01[0]); // 100
-
-            //What is the difference now?
-            /*
-             * the difference will occured if we try to assign the parameter that function take 
-             * to another object
-             * Let's see an example
-             * if we modify the arr parameter in the modify arr and assign it to a new object
-             * arry that hold 789 
-             */
-
-            //in this example it will give 1 because the arr in the function now refere to a new object
-            //int[] arr02 = new int[] { 1, 2, 3 };
-            //Console.WriteLine(arr02[0]); // 1
-            //ModifyArr02(arr02);
-            //Console.WriteLine(arr02[0]); // 1
-
-            //it will give 1 - 7 because in the method it updated the real array
-            //int[] arr02 = new int[] { 1, 2, 3 };
-            //Console.WriteLine(arr02[0]); // 1
-            //ModifyArr02(ref arr02);
-            //Console.WriteLine(arr02[0]); // 7
 
 
             #endregion

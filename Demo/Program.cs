@@ -221,7 +221,6 @@
              * outer the function
              */
 
-
             //int x = 10;
             //Console.WriteLine(x); // 10 
             //IncrementByOne(x);
@@ -244,7 +243,7 @@
 
             //Console.WriteLine(z); // 11
 
-
+            /***************************************************/
 
             //Passing Referecnce type 
             /*
@@ -273,6 +272,9 @@
 
             //Console.WriteLine(arr01[0]); // 100
 
+            /**********************************/
+
+
             //What is the difference now?
             /*
              * the difference will occured if we try to assign the parameter that function take 
@@ -295,11 +297,27 @@
             //Console.WriteLine(arr02[0]); // 7
 
 
+            //Passing By out 
+            /*
+             * Simply we tell the function that you will do your work but the return type on me
+             * i will give you the boxes(variables) that you will return the values in
+             */
+            Sumulti(10, 5, out int sumResult, out int mulResult);
+            Console.WriteLine(sumResult);
+
+            Console.WriteLine(mulResult);
 
 
-            ssss
+
             #endregion
 
+        }
+
+        static void Sumulti(int x , int y , out int sum , out int mul) 
+        {
+            sum = x + y;
+
+            mul = x * y;
         }
         static void ModifyArr02(ref int[] arr)
         {

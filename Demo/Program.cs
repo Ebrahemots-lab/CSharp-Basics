@@ -273,8 +273,31 @@
 
             //Console.WriteLine(arr01[0]); // 100
 
+            //What is the difference now?
+            /*
+             * the difference will occured if we try to assign the parameter that function take 
+             * to another object
+             * Let's see an example
+             * if we modify the arr parameter in the modify arr and assign it to a new object
+             * arry that hold 789 
+             */
+
+            //in this example it will give 1 because the arr in the function now refere to a new object
+            //int[] arr02 = new int[] { 1, 2, 3 };
+            //Console.WriteLine(arr02[0]); // 1
+            //ModifyArr02(arr02);
+            //Console.WriteLine(arr02[0]); // 1
+
+            //it will give 1 - 7 because in the method it updated the real array
+            //int[] arr02 = new int[] { 1, 2, 3 };
+            //Console.WriteLine(arr02[0]); // 1
+            //ModifyArr02(ref arr02);
+            //Console.WriteLine(arr02[0]); // 7
 
 
+
+
+            ssss
             #endregion
 
         }

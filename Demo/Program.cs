@@ -246,6 +246,35 @@
 
 
 
+            //Passing Referecnce type 
+            /*
+             * Passing by value :
+             * if we use passing by value in reference type it will change the real object
+             * meaning it will create another obect in the stack that hold the same adress of the real
+             * arguement that we passed to it 
+             */
+            //int[] arr01 = { 1, 2, 4 };
+            //Console.WriteLine(arr01[0]); // 1
+
+            //ModifyArr(arr01);
+
+            //Console.WriteLine(arr01[0]); // 100
+
+            //Passing by ref 
+            /*
+             * it will do the same but this time it will not create another object in the stack
+             * it will go directly and update the real argument that we passed to the function
+             */
+
+            //int[] arr01 = { 1, 2, 4 };
+            //Console.WriteLine(arr01[0]); // 1
+
+            //ModifyArr(ref arr01);
+
+            //Console.WriteLine(arr01[0]); // 100
+
+
+
             #endregion
 
         }

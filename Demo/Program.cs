@@ -1,4 +1,6 @@
-﻿namespace Demo
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace Demo
 {
     internal class Program
     {
@@ -302,15 +304,40 @@
              * Simply we tell the function that you will do your work but the return type on me
              * i will give you the boxes(variables) that you will return the values in
              */
-            Sumulti(10, 5, out int sumResult, out int mulResult);
-            Console.WriteLine(sumResult);
+            //Sumulti(10, 5, out int sumResult, out int mulResult);
+            //Console.WriteLine(sumResult);
 
-            Console.WriteLine(mulResult);
+            //Console.WriteLine(mulResult);
+
+
+            #region Params
+            //Simple we give the function only items that we need to make the operation on
+
+            //int result = ReturnSum(1, 2, 5, 7);
+            //Console.WriteLine(result);
+            #endregion
+
+
+
 
 
 
             #endregion
 
+        }
+
+
+        static int ReturnSum(params int[] arr) 
+        {
+            int sum = 0;
+           if(arr is not null) 
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    sum += arr[i];
+                }
+            }
+            return sum;
         }
 
         static void Sumulti(int x , int y , out int sum , out int mul) 

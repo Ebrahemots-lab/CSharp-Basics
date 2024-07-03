@@ -1,4 +1,6 @@
-﻿namespace Demo
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace Demo
 {
     internal class Program
     {
@@ -221,7 +223,6 @@
              * outer the function
              */
 
-
             //int x = 10;
             //Console.WriteLine(x); // 10 
             //IncrementByOne(x);
@@ -244,7 +245,7 @@
 
             //Console.WriteLine(z); // 11
 
-
+            /***************************************************/
 
             //Passing Referecnce type 
             /*
@@ -273,10 +274,77 @@
 
             //Console.WriteLine(arr01[0]); // 100
 
+            /**********************************/
+
+
+            //What is the difference now?
+            /*
+             * the difference will occured if we try to assign the parameter that function take 
+             * to another object
+             * Let's see an example
+             * if we modify the arr parameter in the modify arr and assign it to a new object
+             * arry that hold 789 
+             */
+
+            //in this example it will give 1 because the arr in the function now refere to a new object
+            //int[] arr02 = new int[] { 1, 2, 3 };
+            //Console.WriteLine(arr02[0]); // 1
+            //ModifyArr02(arr02);
+            //Console.WriteLine(arr02[0]); // 1
+
+            //it will give 1 - 7 because in the method it updated the real array
+            //int[] arr02 = new int[] { 1, 2, 3 };
+            //Console.WriteLine(arr02[0]); // 1
+            //ModifyArr02(ref arr02);
+            //Console.WriteLine(arr02[0]); // 7
+
+
+            //Passing By out 
+            /*
+             * Simply we tell the function that you will do your work but the return type on me
+             * i will give you the boxes(variables) that you will return the values in
+             */
+            //Sumulti(10, 5, out int sumResult, out int mulResult);
+            //Console.WriteLine(sumResult);
+
+            //Console.WriteLine(mulResult);
+
+
+            #region Params
+            //Simple we give the function only items that we need to make the operation on
+
+            //int result = ReturnSum(1, 2, 5, 7);
+            //Console.WriteLine(result);
+            #endregion
+
+
+
+
 
 
             #endregion
 
+        }
+
+
+        static int ReturnSum(params int[] arr) 
+        {
+            int sum = 0;
+           if(arr is not null) 
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    sum += arr[i];
+                }
+            }
+            return sum;
+        }
+
+        static void Sumulti(int x , int y , out int sum , out int mul) 
+        {
+            sum = x + y;
+
+            mul = x * y;
         }
         static void ModifyArr02(ref int[] arr)
         {
